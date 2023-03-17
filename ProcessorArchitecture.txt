@@ -1,0 +1,12 @@
+Load program into RAM.
+Program Counter = 0
+CPU Grabs current Instruction id from 0x01
+Program Counter = 1
+CPU Grabs opcode from 0x02
+Program Counter = 2
+CPU Grabs opcode from 0x03
+Program Counter = 3
+Lookup Instruction id and decode it.
+CPU Executes Instruction.
+Repeat etc.
+
