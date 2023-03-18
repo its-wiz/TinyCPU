@@ -1,12 +1,28 @@
-Load program into RAM.
-Program Counter = 0
-CPU Grabs current Instruction id from 0x01
-Program Counter = 1
-CPU Grabs opcode from 0x02
-Program Counter = 2
-CPU Grabs opcode from 0x03
-Program Counter = 3
-Lookup Instruction id and decode it.
-CPU Executes Instruction.
-Repeat etc.
+16 Bit Values Loaded Consists of:
+Instruction
+Operand 1
+Operand 2
 
+First Bit Determines Either An Instruction or Opcode Value.
+00000000  00000001 => Instruction 
+00000000  00000000 => Opcode 
+
+00000000  00000001 => Instruction 
+|_______________| -> Value
+
+00000000  00000000 => Opcode 
+Second Bit Determines Either Opcode 1 or Opcode 2.
+00000000  00000000 => Opcode 1 
+00000000  00000010 => Opcode 2
+|______________| -> Value
+
+Execute Instruction Binary:
+ - 11111111  11111111 => Execute Instruction
+
+Instructions:
+[1]
+00000000  00000011 => MOV
+- Opcode 1:
+ => Value to move
+- Opcode 2:
+ => Location in RAM to move
