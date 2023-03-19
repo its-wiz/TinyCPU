@@ -2,7 +2,7 @@
  > -  Custom Architecture CPU Logic Design.<br />
  > - Built in Emulator.<br />
  > - Built in Assembler.<br />
- > - Built in Logic Engine to simulate the CPU.<br />
+  - Built in Logic Engine to simulate the CPU.<br />
  16 ( x 3 ) Bits Per Instruction containing the following:<br />
  Instruction<br />
  Operand 1<br />
