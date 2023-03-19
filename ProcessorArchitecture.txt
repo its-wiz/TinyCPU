@@ -3,26 +3,23 @@ Instruction
 Operand 1
 Operand 2
 
-First Bit Determines Either An Instruction or Opcode Value.
-00000000  00000001 => Instruction 
-00000000  00000000 => Opcode 
-
-00000000  00000001 => Instruction 
-|_______________| -> Value
-
-00000000  00000000 => Opcode 
-Second Bit Determines Either Opcode 1 or Opcode 2.
-00000000  00000000 => Opcode 1 
-00000000  00000010 => Opcode 2
-|______________| -> Value
-
-Execute Instruction Binary:
- - 11111111  11111111 => Execute Instruction
+Binary ->
 
 Instructions:
-[1]
-00000000  00000011 => MOV
-- Opcode 1:
- => Value to move
-- Opcode 2:
- => Location in RAM to move
+    "MOV": "0000000000000001"
+    "RAM_WRITE": "0000000000000010"
+    "RAM_WRITE_REG": "0000000000000011"
+    "RAM_READ": "0000000000000100"
+
+
+Registers:
+    "A": "0000000000000001" -> 1
+    "B": "0000000000000010" -> 2
+    "C": "0000000000000011" -> 3
+    "D": "0000000000000100" -> 4
+
+Assembley ->
+MOV, [REGISTER], [VALUE]
+RAM_WRITE, [LOCATION], [VALUE]
+RAM_WRITE_REG, [LOCATION], [REGISTER]
+RAM_READ, [LOCATION], [REGISTER] 
