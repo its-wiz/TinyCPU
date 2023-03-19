@@ -21,6 +21,7 @@
      "B": "0000000000000010" -> 2<br />
      "C": "0000000000000011" -> 3<br />
      "D": "0000000000000100" -> 4<br />
+<br />
  | Assembley Equivalent: | <br />
  MOV, [REGISTER], [VALUE]<br />
  RAM_WRITE, [LOCATION], [VALUE]<br />
